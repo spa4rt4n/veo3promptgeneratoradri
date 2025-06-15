@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veo 3 Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="main-title">Veo 3 Prompt Generator by Adri Creativity</h1>
+            <div class="controls">
+                <button id="change-title-btn">Ubah Judul</button>
+                <button id="change-style-btn">Ubah Style</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="form-container">
+                <h2>PROMPT KARAKTER KONSISTEN VEO3</h2>
+                <form id="prompt-form">
+                    <div class="form-group">
+                        <label for="judul_scene">1. Judul Scene</label>
+                        <input type="text" id="judul_scene" placeholder="Contoh: Terminal bus malam">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deskripsi_karakter">2. Deskripsi Karakter Inti</label>
+                        <textarea id="deskripsi_karakter" rows="6" placeholder="Contoh: Seorang vlogger wanita muda asal Minang berusia 27 tahun. Perawakan/Bentuk Tubuh: tubuh mungil, tinggi 158cm, bentuk badan proporsional..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="detail_suara">3. Detail Suara Karakter</label>
+                        <textarea id="detail_suara" rows="5" placeholder="Contoh: Dia berbicara dengan suara wanita muda yang hangat dan penuh semangat. Nada: mezzo-soprano... PENTING: Seluruh dialog harus dalam Bahasa Indonesia..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aksi_karakter">4. Aksi Karakter</label>
+                        <textarea id="aksi_karakter" rows="2" placeholder="Contoh: berjalan di sekitar terminal bus malam sambil melihat-lihat aktivitas penumpang dan pedagang."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ekspresi_karakter">5. Ekspresi Karakter</label>
+                        <textarea id="ekspresi_karakter" rows="2" placeholder="Contoh: Karakter menunjukkan ekspresi kagum dan antusias, sering tersenyum sambil melirik kamera."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="latar">6. Latar Tempat & Waktu</label>
+                        <textarea id="latar" rows="3" placeholder="Contoh: latar tempat: di terminal bus antar kota malam hari... Waktu: malam hari, hujan rintik-rintik."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="detail_visual">7. Detail Visual Tambahan</label>
+                        <select id="gerakan_kamera"></select>
+                        <textarea id="detail_visual" rows="4" placeholder="Contoh: Pencahayaan: natural dari lampu jalan... Gaya Video/Art Style: cinematic realistis. Kualitas Visual: Resolusi 4K."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suasana">8. Suasana Keseluruhan</label>
+                        <textarea id="suasana" rows="2" placeholder="Contoh: Suasana sibuk, ramai, dengan kesan perjalanan malam yang hidup dan dinamis meskipun hujan."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suara_lingkungan">9. Suara Lingkungan/Ambience</label>
+                        <textarea id="suara_lingkungan" rows="2" placeholder="Contoh: SOUND: suara mesin bus menyala, pengumuman dari pengeras suara..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dialog">10. Dialog Karakter</label>
+                        <textarea id="dialog" rows="3" placeholder="Contoh: DIALOG dalam Bahasa Indonesia: Karakter berkata: Tiap kota punya terminal kayak gini..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="negative_prompt">11. Negative Prompt</label>
+                        <textarea id="negative_prompt" rows="3" placeholder="Contoh: Hindari: teks di layar, subtitle, tulisan di video, font, logo..."></textarea>
+                    </div>
+
+                    <button type="submit" class="generate-btn">Generate Prompt</button>
+                </form>
+            </div>
+
+            <div class="output-container">
+                <div class="output-column">
+                    <h3>Prompt (Bahasa Indonesia) - Editable</h3>
+                    <textarea id="output-indonesia" class="output-box"></textarea>
+                    <button id="copy-indonesia-btn" class="copy-btn">Salin Prompt</button>
+                </div>
+                <div class="output-column">
+                    <h3>Final Prompt (English) - Readonly</h3>
+                    <textarea id="output-english" class="output-box" readonly></textarea>
+                    <button id="copy-english-btn" class="copy-btn">Salin Prompt</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

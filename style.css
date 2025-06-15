@@ -1,0 +1,206 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #1a1a1a;
+    --background-color: #f0f2f5;
+    --text-color: #333;
+    --widget-bg-color: #ffffff;
+    --border-color: #dcdcdc;
+    --header-bg: #fff;
+    --header-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 15px 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--header-shadow);
+}
+
+#main-title {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.controls button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    opacity: 0.9;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-container, .output-container {
+    background-color: var(--widget-bg-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fdfdfd;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+textarea {
+    resize: vertical;
+}
+
+#gerakan_kamera {
+    margin-bottom: 10px;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+    opacity: 0.9;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.output-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.output-box {
+    width: 100%;
+    height: 350px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fafafa;
+}
+
+#output-english {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.copy-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    --primary-color: #007bff;
+    --secondary-color: #f0f2f5;
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --widget-bg-color: #2c2c2c;
+    --border-color: #444;
+    --header-bg: #2c2c2c;
+    --header-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-theme .output-box {
+    background-color: #222;
+}
+
+body.dark-theme #output-english {
+    background-color: #1f1f1f;
+    color: #bbb;
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+} 
